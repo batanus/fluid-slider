@@ -44,6 +44,13 @@ open class Slider : UIControl {
         super.init(frame: frame)
         initialize()
     }
+
+    override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        updateValueViewColor()
+        setNeedsLayout()
+    }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
