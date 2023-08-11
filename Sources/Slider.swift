@@ -367,7 +367,7 @@ open class Slider : UIControl {
         } else {
             filter.threshold = 0.45
         }
-        filter.backgroundColor = contentViewColor
+        filter.backgroundColor = contentViewColor?.resolvedColor(with: traitCollection)
         filter.antialiasingRadius = scale / 2
         filter.inputImage = CIImage(cgImage: inputImage.cgImage!)
         
