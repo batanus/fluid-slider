@@ -356,7 +356,7 @@ open class Slider : UIControl {
         
         filter.blurRadius = radius
         if #available(iOS 13.0, *) {
-            filter.threshold = 0.7
+            filter.threshold = 0.79
         } else {
             filter.threshold = 0.45
         }
